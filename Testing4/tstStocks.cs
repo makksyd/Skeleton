@@ -12,7 +12,32 @@ namespace Testing4
         {
             clsStocks anStocks = new clsStocks();
             Assert.IsNotNull(anStocks);
-       
+
+        }
+        [TestMethod]
+        public void item_availablePropertyOK()
+        {
+            clsStocks anStocks = new clsStocks();
+            Boolean TestData = true;
+            anStocks.item_available = TestData;
+
+            Assert.AreEqual(anStocks.item_available, TestData);
+        }
+        [TestMethod]
+        public void restock_datePropertyOK()
+        {
+            clsStocks anStocks = new clsStocks();
+            DateTime TestData = DateTime.Now.Date;
+            anStocks.restock_date = TestData;
+            Assert.AreEqual(anStocks.restock_date, TestData);
+        }
+        [TestMethod]
+        public void quantity_availablePropertyOK()
+        {
+            clsStocks anStocks = new clsStocks();
+            int TestData = 1;
+            anStocks.quantity_available = TestData;
+            Assert.AreEqual(anStocks.quantity_available, TestData);
         }
     }
 }
