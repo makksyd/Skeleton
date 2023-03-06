@@ -20,7 +20,6 @@ namespace Testing4
             clsStocks anStocks = new clsStocks();
             Boolean TestData = true;
             anStocks.item_available = TestData;
-
             Assert.AreEqual(anStocks.item_available, TestData);
         }
         [TestMethod]
@@ -38,6 +37,22 @@ namespace Testing4
             int TestData = 1;
             anStocks.quantity_available = TestData;
             Assert.AreEqual(anStocks.quantity_available, TestData);
+        }
+        [TestMethod]
+        public void item_namePropertyOK()
+        {
+            clsStocks anStocks = new clsStocks();
+            string TestData = "CD";
+            anStocks.item_name = TestData;
+            Assert.AreEqual(anStocks.item_name, TestData);
+        }
+        [TestMethod]
+        public void item_descriptionPropertyOK()
+        {
+            clsStocks anStocks = new clsStocks();
+            string TestData = "Album";
+            anStocks.item_description = TestData;
+            Assert.AreEqual(anStocks.item_description, TestData);
         }
     }
 }
