@@ -13,5 +13,14 @@ namespace Testing1
             clsSuppliers ASupplier = new clsSuppliers();
             Assert.IsNotNull(ASupplier);
         }
+
+        [TestMethod]
+        public void CompanyNameProperty_ok()
+        {
+            clsSuppliers ASupplier = new clsSuppliers();
+            string TestData = "CompanyName";
+            ASupplier.CompanyName = TestData;
+            Assert.AreEqual(ASupplier.CompanyName, TestData);
+        }
     }
 }
